@@ -1,6 +1,45 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "assignees": [
+    "ShSato4JPN"
+  ],
+  "reviewers": [
+    "ShSato4JPN"
+  ],
   "extends": [
-    "config:recommended"
+    "config:base"
+  ],
+  "timezone": "Asia/Tokyo",
+  "packageRules": [
+    {
+      "automerge": true,
+      "groupName": "devDependencies",
+      "matchDepTypes": [
+        "devDependencies"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest"
+      ]
+    },
+    {
+      "automerge": true,
+      "groupName": "dependencies",
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest"
+      ]
+    }
+  ],
+  "platformAutomerge": true,
+  "schedule": [
+    "every weekend"
   ]
 }
