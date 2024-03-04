@@ -1,0 +1,5 @@
+{
+  "*": "prettier --ignore-unknown --write",
+  "**/*.scss": "stylelint --fix",
+  "**/*.{tsx,tx}": "eslint --fix"
+}
