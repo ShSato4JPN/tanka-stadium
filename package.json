@@ -7,9 +7,13 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "prisma-studio": "npx prisma studio",
+    "prisma-push": "npx prisma db push",
+    "prisma-gen": "npx prisma generate"
   },
   "dependencies": {
+    "@prisma/client": "5.10.2",
     "next": "14.1.1",
     "react": "^18",
     "react-dom": "^18",
@@ -30,6 +34,7 @@
     "husky": "9.0.11",
     "lint-staged": "15.2.2",
     "prettier": "3.2.5",
+    "prisma": "5.10.2",
     "stylelint": "16.2.1",
     "stylelint-config-css-modules": "4.4.0",
     "stylelint-config-standard-scss": "13.0.0",
