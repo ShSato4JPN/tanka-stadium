@@ -2,7 +2,7 @@ import { PrismaClient } from "@prisma/client";
 
 // global.prisma に明示的に型を定義
 declare global {
-  var prisma: PrismaClient;
+  var prisma: PrismaClient; // eslint-disable-line
 }
 
 let prisma: PrismaClient;
