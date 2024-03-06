@@ -14,10 +14,13 @@
   },
   "dependencies": {
     "@prisma/client": "5.10.2",
+    "@stytch/nextjs": "17.0.1",
+    "@stytch/vanilla-js": "4.6.0",
     "next": "14.1.1",
     "react": "^18",
     "react-dom": "^18",
-    "sass": "1.71.1"
+    "sass": "1.71.1",
+    "stytch": "10.7.0"
   },
   "devDependencies": {
     "@commitlint/cli": "19.0.3",
@@ -25,6 +28,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "7.1.1",
     "@typescript-eslint/parser": "7.1.0",
     "eslint": "^8",
     "eslint-config-next": "14.1.1",
