@@ -1,8 +1,9 @@
 "use client";
 
+import { useEffect } from "react";
+
 import { useStytchUser, useStytch } from "@stytch/nextjs";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useEffect } from "react";
 
 const OAUTH_TOKEN = "oauth";
 const MAGIC_LINKS_TOKEN = "magic_links";

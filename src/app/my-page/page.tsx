@@ -1,8 +1,9 @@
 "use client";
 
+import { useEffect } from "react";
+
 import { useStytchUser } from "@stytch/nextjs";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
 
 import MyPage from "@/components/MyPage";
 

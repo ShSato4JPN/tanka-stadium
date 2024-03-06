@@ -1,8 +1,9 @@
 "use client";
 
+import React from "react";
+
 import { StytchLogin } from "@stytch/nextjs";
 import { Products } from "@stytch/vanilla-js";
-import React from "react";
 
 import { getDomainFromWindow } from "../../../lib/urlUtils";
 

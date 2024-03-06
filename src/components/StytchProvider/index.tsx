@@ -1,7 +1,8 @@
 "use client";
+import { ReactNode } from "react";
+
 import { StytchProvider as ProviderActual } from "@stytch/nextjs";
 import { createStytchUIClient } from "@stytch/nextjs/dist/index.ui";
-import { ReactNode } from "react";
 
 const stytch = createStytchUIClient(
   process.env.NEXT_PUBLIC_STYTCH_PUBLIC_TOKEN || "",

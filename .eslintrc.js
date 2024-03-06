@@ -26,15 +26,29 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["@typescript-eslint", "react", "import"],
+  plugins: ["@typescript-eslint", "react", "import", "unused-imports"],
   rules: {
     "import/order": [
       "error",
       {
+        groups: [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+        ],
         "newlines-between": "always",
-        alphabetize: {
-          order: "asc",
-        },
+        alphabetize: { order: "asc", caseInsensitive: true },
+        pathGroups: [
+          {
+            pattern: "react**",
+            group: "external",
+            position: "before",
+          },
+        ],
+        pathGroupsExcludedImportTypes: ["react"],
       },
     ],
   },
