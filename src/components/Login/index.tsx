@@ -25,16 +25,7 @@ function LoginTop() {
     oauthOptions: {
       providers: [
         {
-          type: "google",
-        },
-        {
-          type: "yahoo",
-        },
-        {
-          type: "twitter",
-        },
-        {
-          type: "facebook",
+          type: "github",
         },
       ],
       loginRedirectURL: getDomainFromWindow() + "/authenticate",
