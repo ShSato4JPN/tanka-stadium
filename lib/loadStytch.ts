@@ -1,6 +1,6 @@
 import * as stytch from "stytch";
 
-let client;
+let client: stytch.Client | undefined;
 
 /*
 loadStytch initializes the Stytch Backend SDK using your project's id and secret. The Backend SDK can be used
