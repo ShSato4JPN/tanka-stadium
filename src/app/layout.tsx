@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
+import AuthProvider from "@/components/AuthProvider";
 import StytchProvider from "@/components/StytchProvider";
 import "./globals.scss";
 
@@ -18,9 +19,11 @@ export default function RootLayout({
 }>) {
   return (
     <StytchProvider>
-      <html lang="ja">
-        <body className={inter.className}>{children}</body>
-      </html>
+      <AuthProvider>
+        <html lang="ja">
+          <body className={inter.className}>{children}</body>
+        </html>
+      </AuthProvider>
     </StytchProvider>
   );
 }
