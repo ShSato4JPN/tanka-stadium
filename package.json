@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@prisma/client": "5.10.2",
-    "@stytch/nextjs": "17.0.1",
+    "@stytch/nextjs": "18.0.0",
     "@stytch/vanilla-js": "4.6.0",
     "next": "14.1.1",
     "react": "^18",
