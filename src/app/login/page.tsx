@@ -10,10 +10,9 @@ import Login from "@/components/Login";
 export default function Page() {
   const { user, isInitialized } = useStytchUser();
   const router = useRouter();
-
   useEffect(() => {
     if (isInitialized && user) {
-      router.replace("/my-page");
+      router.replace("/profile");
     }
   }, [user, isInitialized, router]);
 
