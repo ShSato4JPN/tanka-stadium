@@ -9,7 +9,7 @@ export type GetUserData = {
 };
 
 export async function GET(
-  req: Request,
+  _: Request,
   {
     params,
   }: {
