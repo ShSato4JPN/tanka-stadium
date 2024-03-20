@@ -3,19 +3,19 @@ import { NextResponse } from "next/server";
 
 import prisma from "@lib/prisma";
 
-export type GetUserResponse = {
-  user: User | null;
+export type GetUserData = {
+  user: Pick<User, "id" | "name" | "message"> | null;
   tankas: Tanka[];
 };
 
 export async function GET(
-  _: Request,
+  req: Request,
   {
     params,
   }: {
     params: { id: string };
   },
-): Promise<NextResponse<GetUserResponse>> {
+): Promise<NextResponse<GetUserData>> {
   try {
     const user = await prisma.user.findUnique({
       where: {
@@ -42,13 +42,12 @@ export async function GET(
       user: {
         id: user.id,
         name: user.name,
-        message: user?.message,
-        createdAt: user?.createdAt,
-        updatedAt: user?.updatedAt,
+        message: user.message,
       },
       tankas: user?.tankas || [],
     });
   } catch (error) {
+    console.log(error);
     return NextResponse.json(
       { user: null, tankas: [] },
       {
