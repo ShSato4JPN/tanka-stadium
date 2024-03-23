@@ -1,0 +1,71 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    font-size: 2.3rem;
+    padding: 10px 0 10px 3px;
+    font-weight: bold;
+  }
+
+  &__nav {
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid #42bd42;
+    box-sizing: border-box;
+    gap: 1px;
+
+    .link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      height: 100%;
+      cursor: pointer;
+      border-radius: 6px 6px 0 0;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+  }
+}
+
+/* Tablet and Smaller Desktop */
+@media (width >= 428px) {
+  .menu {
+    &__title {
+      font-size: 3.2rem;
+      padding: 12px 0 12px 5px;
+    }
+
+    &__nav {
+      height: 40px;
+      border-bottom: 2px solid #42bd42;
+
+      .link {
+        padding: 18px;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+/* Larger Desktop */
+@media (width >= 1120px) {
+  .menu {
+    &__title {
+      font-size: 3.5rem;
+      padding: 15px 0 15px 5px;
+    }
+
+    &__nav {
+      height: 55px;
+      border-bottom: 2px solid #42bd42;
+
+      .link {
+        padding: 20px;
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
