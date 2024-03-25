@@ -10,7 +10,8 @@
     "prepare": "husky install",
     "prisma-studio": "npx prisma studio",
     "prisma-push": "npx prisma db push",
-    "prisma-gen": "npx prisma generate"
+    "prisma-gen": "npx prisma generate",
+    "prebuild": "npm run prisma-gen"
   },
   "dependencies": {
     "@hookform/error-message": "2.0.1",
