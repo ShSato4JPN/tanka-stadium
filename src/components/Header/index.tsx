@@ -10,10 +10,8 @@ import styles from "./style.module.scss";
 
 function Header() {
   const pathname = usePathname();
-
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const menuItems = useMenu();
-
   // 現在のパスに応じてスタイルを変更する
   const currentStyle = useMemo(
     () => ({
