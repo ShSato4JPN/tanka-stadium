@@ -48,7 +48,7 @@ function TankaCreateForm() {
   const createTanka = async () => {
     try {
       const data = getValues();
-      await fetch("/api/v1/create/tanka", {
+      await fetch(`${process.env.NEXT_PUBLIC_URL}/api/v1/create/tanka`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
