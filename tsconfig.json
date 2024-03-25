@@ -27,7 +27,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "lib/loadStytch.s"
+    "lib/loadStytch.ts",
+    "src/app/(protected)/profile/page.tsx"
   ],
   "exclude": ["node_modules"]
 }

@@ -1,10 +1,12 @@
-import { User, Tanka } from "@prisma/client";
+import { User } from "@prisma/client";
 import { create } from "zustand";
+
+import { CustomTanka } from "@/types";
 
 export type UserStoreState = {
   userStore: {
     user: User;
-    tankas: Tanka[];
+    tankas: CustomTanka[];
   };
 };
 
