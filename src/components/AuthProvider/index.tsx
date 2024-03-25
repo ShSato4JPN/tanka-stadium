@@ -5,7 +5,8 @@ import { User } from "@prisma/client";
 import { useStytchUser } from "@stytch/nextjs";
 import { useRouter } from "next/navigation";
 
-import { GetUserData } from "@/app/api/v1/user/[id]/route";
+import { GetUserData } from "@/app/api/v1/get/user/[id]/route";
+import Loading from "@/components/Loading";
 import { useUserStore } from "@/store/user";
 
 type AuthProviderProps = {
@@ -21,7 +22,7 @@ function AuthProvider({ children }: AuthProviderProps) {
   const getUserData = useCallback(
     async (userId: string): Promise<GetUserData> => {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_URL}/api/v1/user/${userId}`,
+        `${process.env.NEXT_PUBLIC_URL}/api/v1/get/user/${userId}`,
         {
           cache: "no-store",
         },
@@ -37,7 +38,7 @@ function AuthProvider({ children }: AuthProviderProps) {
     (params: { userId: string; userName: string }) => Promise<GetUserData>
   >(async ({ userId, userName }: { userId: string; userName: string }) => {
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_URL}/api/v1/user/create`,
+      `${process.env.NEXT_PUBLIC_URL}/api/v1/create/user`,
       {
         method: "post",
         body: JSON.stringify({ userId, userName }),
@@ -51,7 +52,7 @@ function AuthProvider({ children }: AuthProviderProps) {
   // トランザクションを実行
   const transaction = useCallback(
     async ({ userId, userName }: { userId: string; userName: string }) => {
-      // ユーザー情報を取得します
+      // ユーザー情報を取得
       let userData = await getUserData(userId);
       if (!userData.user) {
         // ユーザーが存在しない場合は新規作成
@@ -85,11 +86,11 @@ function AuthProvider({ children }: AuthProviderProps) {
           router.replace("/login");
         });
     }
-
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [user]);
+  }, [user, isInitialized]);
 
-  return children;
+  // ユーザー情報取得後はストアの情報をもとにログイン判定を行う
+  return user ? children : <Loading />;
 }
 
 export default AuthProvider;
