@@ -16,7 +16,6 @@ export async function GET(
   },
 ): Promise<NextResponse<DeleteInfoData>> {
   try {
-    console.log(params);
     await prisma.tanka.delete({
       where: {
         id: params.id,
