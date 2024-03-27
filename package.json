@@ -35,16 +35,16 @@
     "zustand": "4.5.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "19.0.3",
-    "@commitlint/config-conventional": "19.0.3",
+    "@commitlint/cli": "19.2.1",
+    "@commitlint/config-conventional": "19.1.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/react-modal": "3.16.3",
-    "@typescript-eslint/eslint-plugin": "7.1.1",
-    "@typescript-eslint/parser": "7.1.0",
+    "@typescript-eslint/eslint-plugin": "7.4.0",
+    "@typescript-eslint/parser": "7.4.0",
     "eslint": "^8",
-    "eslint-config-next": "14.1.1",
+    "eslint-config-next": "14.1.4",
     "eslint-config-prettier": "9.1.0",
     "eslint-import-resolver-typescript": "3.6.1",
     "eslint-plugin-import": "2.29.1",
@@ -52,11 +52,11 @@
     "husky": "9.0.11",
     "lint-staged": "15.2.2",
     "prettier": "3.2.5",
-    "prisma": "5.10.2",
-    "stylelint": "16.2.1",
+    "prisma": "5.11.0",
+    "stylelint": "16.3.1",
     "stylelint-config-css-modules": "4.4.0",
     "stylelint-config-standard-scss": "13.0.0",
     "typescript": "^5",
-    "typescript-eslint": "7.1.0"
+    "typescript-eslint": "7.4.0"
   }
 }
