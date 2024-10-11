@@ -30,7 +30,7 @@
     "react-loader-spinner": "6.1.6",
     "react-modal": "3.16.1",
     "sass": "1.71.1",
-    "stytch": "10.7.0",
+    "stytch": "11.7.0",
     "swr": "2.2.5",
     "zustand": "4.5.2"
   },
