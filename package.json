@@ -32,7 +32,7 @@
     "sass": "1.71.1",
     "stytch": "10.7.0",
     "swr": "2.2.5",
-    "zustand": "4.5.2"
+    "zustand": "5.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "19.0.3",
